@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>Авторизация</title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+</head>
+<script src = "reg.js"></script>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Новости</h1>
+		</header>
+		<figure>
+			<div class="row">
+				<div class="block">
+					<h4>Авторизация</h4>
+					<h3>Добро пожаловать!</h3>
+					<h4 style = 'color: red; font-weight: 300;'><?php echo $auth_status;?></h4>
+					<form action="auth.php" method="post" id="user-login">
+						<input type="text" id="log-text" placeholder="Введите логин" name="login" required>
+						<input type="password" id="log-text" placeholder="Введите пароль" name="password" required>
+						<input type="submit" id="log-button" value="Войти">
+					</form>
+					<p>Нет аккаунта?
+					<h4 style="margin-top: -1rem">Пройдите быструю регистрацию</h4>
+				</div>
+				<div class="block">
+					<h4>Регистрация</h4>
+					<form action = "register.php" method="post" id="user-login" name = "registration">
+						<input type="text" id="log-text" placeholder="Введите логин"  onchange = "login_check()" name = "login" required>
+						<span id = "output1"></span>
+						<input type="email" id="log-text" placeholder="Введите почту" onchange = "mail_check()" name = "mail" required>
+						<input type="password" id="log-text" placeholder="Введите пароль" onchange = "password1_check()" name = "password1" required>
+						<span id = "output2"></span>
+						<input type="password" id="log-text" placeholder="Повторите пароль" onchange = "password2_check()" name = "password2" required>
+						<span id = "output3"></span>
+						<input type="submit" id="log-button" value="Регистрация" onclick = "check(event)"> 
+					</form>
+				</div>
+			</div>	
+		</figure>
+	</div>
+</body>
+</html>

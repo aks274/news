@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>Поиск пользователей и новостей</title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Новости</h1>
+		</header>
+		<figure>
+			<div class="row">
+				<div class="block">
+					<h4>Поиск пользователей</h4>
+					<h3>Введите логин или id</h3>
+					<form action="#" method="post" id="user-login">
+					<input type="text" id="log-text" placeholder="Введите логин" name="login">
+					<h4 style = "margin-bottom: -1rem; margin-top: .5rem">или</h4>
+					<input type="text" id="log-text" placeholder="Введите id" name="user_id">
+					<input type="submit" id="log-button" value="Найти">
+					</form>
+				</div>
+				<div class="block">
+					<h4>Поиск новостей</h4>
+					<h3>Введите id</h3>
+					<form action="#" method="post" id="user-login">
+						<input type="text" id="log-text" placeholder="Введите id" name="pageId" required>
+						<input type="submit" id="log-button" value="Найти" style = "margin-top: 5.3rem">
+					</form>
+				</div>
+			</div>
+			<h4 style = "text-align:center; margin-bottom: .5rem; color: red; font-weight: 400;"><?=$_GET['OpResult']?></h4>
+			<div class="row">
+				<div class="block">
+					<h4>Результат поиска:</h4>
+					<h3><?=$searchRes?></h3>
+					<h4>id пользователя: <b><?=$searchId?></b></h4>
+					<form action="actionUpd.php" method="post" id="user-login">
+					<input type="text" id="log-text" name="userIdSend" style = "display: none" value = "<?=$userResId?>">
+					<input type="text" id="log-text" name="userLogSend" style = "display: none" value = "<?=$userResLog?>">
+					<input type="submit" id="log-button" value="Заблокировать" <?=$buttonDisabled?>>
+					</form>
+				</div>
+				<div class="block">
+					<h4>Результат поиска:</h4>
+					<h3><?=$searchResP?></h3>
+					<h4><a href = "<?=$searchPId?>">Ссылка</a> на новость</h4>
+					<form action="actionDel.php" method="post" id="user-login">
+					<input type="text" id="log-text" name="pageIdSend" style = "display: none" value = "<?=$searchResId?>">
+					<input type="submit" id="log-button" value="Удалить" <?=$buttonPDisabled?>>
+					</form>
+				</div>
+			</div>
+		</figure>
+	</div>
+</body>
+</html>

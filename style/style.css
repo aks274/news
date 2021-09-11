@@ -1,0 +1,447 @@
+body{
+	background: #f5f5f5; 
+	color: black;
+	font-family: Roboto;
+	margin: 0;
+}
+
+#wrapper {
+	max-width: 960px;
+	margin: auto;
+}
+
+header {
+	padding-top: 5px; 
+	padding-bottom: 3px;
+	text-align: center;
+	border-bottom: 1px solid #dee2e6;
+}
+
+header h1{
+	display: inline-block;
+	font-family: 'OfficinaSerifCTT';
+	font-size: 48px;
+	font-weight: 900;
+	margin: .5rem;
+	color: #343a40;
+}
+
+#profile-log{
+	display: block;
+	float: left;
+}
+#profile-log p{
+	margin-top: -.1rem;
+	font-weight: bolder;
+}
+
+#profile-log a{
+	text-decoration: none;
+	color: #343a40;
+}
+
+#profile-log img{
+	margin-top: 10%;
+	width: 30px;
+	height: 30px;
+}
+/* Кнопка входа*/
+
+form[id="enter"] {
+	float: right;
+}
+
+form[id="enter"] > input{
+	border-radius: 5px;
+	padding: 8px;
+	background: none;
+	border-color: #4e4e4e;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 25%;
+	transition: background .7s;
+}
+
+form[id="enter"] > input:hover{
+	background: #4e4e4e;
+	color: #ffffff;
+	transition: background .7s;
+}
+
+/* Меню */
+
+nav a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0 0 5px 0;
+}
+
+nav li {
+	font-size: 1.2rem;	
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px 10px 0px;
+	margin: 0;
+	width: 131px;
+	text-align: center;
+}
+
+.top-menu li:first-child {
+	padding-left: 0;
+	text-align: left;
+}
+
+.top-menu li:last-child {
+	padding-right: 0;
+	text-align: right;
+} 
+
+.top-menu li.active {
+	font-weight: 900;
+	color: #4e4e4e;
+}
+
+.top-menu a {
+	color: #b2b2b2;
+}
+
+.top-menu a:hover {
+	color: black;
+}
+
+/* Главная новость */
+
+#lsbox{
+	width: 50%;
+}
+#rsbox{
+	width: 50%;	
+}
+
+.rsbox-img {
+	height: 120%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: -1.5rem;
+	margin-left: 0;
+}
+
+section {
+	margin: 0;
+	background: #343a40;
+	color: white;
+	padding: 1.5rem;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: flex;
+	overflow: hidden;
+}
+
+section h1{
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-weight: 900;
+	font-size: 3rem;
+	margin: 0;
+}
+
+section h4{
+	font-weight: 100;
+	font-size: 1rem;
+	margin: 0;
+}
+
+section p{
+	font-weight: lighter;
+	font-size: 1.25rem;
+}
+
+section a{
+	font-weight: bolder;
+	font-size: 1.5rem;
+	color: #ffffff;
+	text-decoration: none;
+	transition: color .7s;
+}
+
+section a:hover{
+	color: orange;
+	transition: color .7s;
+}
+
+/* Новости */
+
+figure {
+	margin: auto;
+	margin-top: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.row {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.block:first-child {
+	margin-right: 10px;
+} 
+
+.block {
+	background-color: #ffffff;
+	color: black;
+	padding: 1.5rem;
+	border-radius: 4px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);
+	overflow: hidden;
+	max-width: 427px;
+	width: 50%;
+}
+
+.block .block-img {
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: -1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+figure a {
+	font-weight: bolder;
+	font-size: 1rem;
+	color: black;
+	text-decoration: none;
+}
+
+figure h3{
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 0;
+	margin-bottom: .5rem;
+}
+
+figure h4{
+	font-weight: 100;
+	font-size: 1rem;
+	margin: 0;
+}
+
+figure p{
+	font-weight: lighter;
+	font-size: 1.2rem;
+}
+
+figure img{
+	max-width: 430px;
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+/* Новостная страница */
+
+.news-img {
+	height: 450px;
+	width: 120%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: -1.5rem;
+}
+
+form[id="rating"]{
+	max-width: 960px;
+	overflow: hidden;
+	display: flex;
+	text-align: center;
+}
+
+form[id="rating"] > [name="ratingChange"]{
+	border-radius: 5px;
+	padding: 6px;
+	width: 30px;
+	background: none;
+	border-color: #fff;
+	font-size: 15px;
+	color: #fff;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: background .7s;
+	border-style: solid;
+	outline: none;
+}
+
+form[id="rating"] > [name="ratingChange"]:hover{
+	background: #fff;
+	color: #000000;
+	transition: background .7s;
+}
+
+form[id="rating"] > [name="ratingChange"]:first-child{
+	margin-right: .5rem;
+}
+
+form[id="rating"] > [name="ratingChange"]:last-child{
+	margin-left: .5rem;
+}
+
+form[id="rating"] > h4{
+	vertical-align: middle;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+
+/* Комментарии */
+
+.comm a {
+	font-weight: bolder;
+	font-size: 1.2rem;
+	color: black;
+	text-decoration: none;
+}
+
+.comm {
+	text-align: center;
+	margin-bottom: -1.5rem;
+}
+
+form[id="ent-com"]{
+	max-width: 960px;
+	overflow: hidden;
+}
+
+form[id="ent-com"] > [name="comm"]{
+	max-width: 960px;
+	min-height: 100px;
+	width: 90%;
+	resize: none;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	font-family: Roboto;
+	padding: 1rem;
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+form[id="ent-com"] > [name="send-com"]{
+	border-radius: 5px;
+	padding: 8px;
+	background: none;
+	border-color: #4e4e4e;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: .1rem;
+	transition: background .7s;
+}
+
+form[id="ent-com"] > [name="send-com"]:hover{
+	background: #4e4e4e;
+	color: #ffffff;
+	transition: background .7s;
+}
+
+/* Страница пользователя */
+
+form[id="user-set"] > [name="set-text"]{
+	margin-top: 1rem;
+	margin-right: .5rem;
+	width: 70%;
+	resize: none;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	font-family: Roboto;
+	padding: .5rem;
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);	
+}
+
+form[id="user-set"] > [name="set-button"]{
+	border-radius: 5px;
+	padding: 7px;
+	background: none;
+	border-color: #4e4e4e;
+	font-size: 13px;
+	cursor: pointer;
+	margin-top: .1rem;
+	transition: background .7s;
+}
+
+form[id="user-set"] > [name="set-button"]:hover{
+	background: #4e4e4e;
+	color: #ffffff;
+	transition: background .7s;
+}
+
+/* Авторизация */
+
+form[id="user-login"] > [id="log-text"]{
+	margin-top: 1.5rem;
+	margin-right: .5rem;
+	width: 70%;
+	resize: none;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	font-family: Roboto;
+	padding: .5rem;
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+form[id="user-login"] > [id="log-button"]{
+	border-radius: 5px;
+	padding: 7px;
+	background: none;
+	border-color: #4e4e4e;
+	font-size: 13px;
+	cursor: pointer;
+	margin-top: 1rem;
+	transition: background .7s;
+	width: 30%;
+}
+
+form[id="user-login"] > [id="log-button"]:hover{
+	background: #4e4e4e;
+	color: #ffffff;
+	transition: background .7s;
+}
+	
+
+/* Кнопка наверх */
+
+.totop {
+	position: fixed;
+	bottom: 80px;
+	right: 60px;
+	background: none;
+	cursor: pointer;
+	opacity: 0.1;
+	} 
+	
+.totop:hover {
+	opacity: 1;
+}
+
+/* Футер */
+
+footer {
+	background: #f9f9f9;
+	color: #999;
+	font-size: 11px;
+	border-top: 1px solid #dee2e6;
+	text-align: center;
+}
+
+#footer {
+	max-width: 960px;
+	margin: auto;
+	height: 40px;
+	font-size: 1rem;
+}

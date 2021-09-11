@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title>Страница пользователя</title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id = "profile-log" style="<?=$loggedin1?>">
+				<a href="profile.php">
+				<img src="style/profile.png"/>
+				<p><?=$login?>
+				</a>
+			</div>
+			<h1>Новости</h1>
+			<form action="<?=$redirect?>" method="post" id = "enter"> 
+			<input type="submit" value="<?=$loggedin?>" id = "enter">
+			</form>
+		</header>
+		<nav>
+			<ul class="top-menu">
+				<li><a href="index.php?p=index">Главная</a></li>
+				<li><a href="index.php?p=politics">Политика</a></li>
+				<li><a href="index.php?p=sport">Спорт</a></li>
+				<li><a href="index.php?p=culture">Культура</a></li>
+				<li><a href="index.php?p=tech">Технологии</a></li>
+				<li><a href="index.php?p=offtop">#Оффтоп</a></li>
+			</ul>
+		</nav>
+		<section>
+			<div id = "news">
+				<h1><?=$login?></h1>
+				<h4>Страница пользователя</h4>
+			</div>
+		</section>
+		<figure>
+			<div class="row">
+				<div class="block">
+					<h4>Информация</h4>
+					<h3>Рейтинг</h3>
+					<p><?=$userRate?></p>
+					<h3>Почта</h3>
+					<p><?=$mail?></p>
+				</div>
+				<div class="block">
+					<h4>Настройки</h4>
+					<form action="#" method="post" id="user-set">
+						<input type="text" name="set-text" placeholder="Введите логин" required><input type="submit" name="set-button" value="Изменить">
+						<input type="text" name="set-text" placeholder="Введите почту" required><input type="submit" name="set-button" value="Изменить">
+						<input type="password" name="set-text" placeholder="Введите пароль" required>
+						<input type="password" name="set-text" placeholder="Повторите пароль" required><input type="submit" name="set-button" value="Изменить">
+					</form>
+				</div>
+			</div>	
+		</figure>
+		<form action="add.html" method="post" id="user-set">
+		<input type="submit" name="set-button" value="Добавить новость" style = "font-size: 1rem; margin-top: -1rem; padding: 10px;">
+		</form>
+		<h1>Ваши новости:</h1>
+		<figure>
+			<?=$rows1?>
+		</figure>
+		<h1>Ваши комментарии:</h1>
+		<figure>
+			<?=$rows?>
+		</figure>
+	</div>
+	<footer>
+		<div id="footer">
+			<p>«Новости» © 2020
+		</div>
+	</footer>
+	<a href="#" class="totop"><img src="style/top.png" alt="Наверх" border="0" width = 50 height = 50></a>
+</body>
+</html>

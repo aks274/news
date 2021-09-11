@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<meta charset = "ansi">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title><?=$title?></title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id = "profile-log" style="<?=$loggedin1?>">
+				<a href="profile.php">
+				<img src="style/profile.png"/>
+				<p><?=$login?>
+				</a>
+			</div>
+			<h1>Новости</h1>
+			<form action="<?=$redirect?>" method="post" id = "enter"> 
+			<input type="submit" value="<?=$loggedin?>" id = "enter">
+			</form>
+		</header>
+		<nav>
+			<ul class="top-menu">
+				<li><a href="index.php?p=index">Главная</a></li>
+				<li><a href="index.php?p=politics">Политика</a></li>
+				<li><a href="index.php?p=sport">Спорт</a></li>
+				<li><a href="index.php?p=culture">Культура</a></li>
+				<li><a href="index.php?p=tech">Технологии</a></li>
+				<li><a href="index.php?p=offtop">#Оффтоп</a></li>
+			</ul>
+		</nav>
+		<section>
+			<div id = "news">
+				<div class = "news-img" style = "background-image: linear-gradient(to top, #343a40, transparent), url(<?=$img?>);"></div>
+				<h4><?=$date_post?> | Автор: <?=$author?></h4>
+				<h1><?=$header?></h1>
+				<p><?=$text?>
+				<hr>
+				<form action="rateupd.php" method="post" id = "rating">
+				<input type="submit" value="-" name = "ratingChange" style = "<?=$rateVoted?>">
+				<h4><?=$pageRating?></h4>
+				<input type="submit" value="+" name = "ratingChange" style = "<?=$rateVoted?>">
+				</form>
+			</div>
+		</section>
+		<h1>Комментарии:</h1>
+		<p><?=$emptyComm?></p>
+		<figure>
+			<?=$rows?>
+			<div class = "comm">
+				<p style = "<?=$loginComm?>"><a href = "auth.html">Войдите</a>, чтобы оставить комментарий</p>
+				<form action = "comm.php" method = "post" id = "ent-com" style = "<?=$writeComm?>">
+				<p>Написать комментарий:</p>
+				<textarea name="comm" placeholder="Введите комментарий" required></textarea>
+				<input type="submit" value="Отправить" name = "send-com">
+				</form>
+			</div>
+		</figure>
+	</div>
+	<footer>
+		<div id="footer">
+			<p>Новости © 2020
+		</div>
+	</footer>
+	<a href="#" class="totop"><img src="style/top.png" alt="РќР°РІРµСЂС…" border="0" width = 50 height = 50></a>
+</body>
+</html>

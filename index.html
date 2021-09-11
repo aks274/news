@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<meta charset = "ansi">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<title><?=$title?></title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id = "profile-log" style="<?=$loggedin1?>">
+				<a href="profile.php">
+				<img src="style/profile.png"/>
+				<p><?=$login?>
+				</a>
+			</div>
+			<h1>Новости</h1>
+			<form action="<?=$redirect?>" method="post" id = "enter"> 
+			<input type="submit" value="<?=$loggedin?>" id = "enter">
+			</form>
+		</header>
+		<nav>
+			<ul class="top-menu">
+				<li <?=$cur_page0?>><?=$href0?>Главная</a></li>
+				<li <?=$cur_page1?>><?=$href1?>Политика</a></li>
+				<li <?=$cur_page2?>><?=$href2?>Спорт</a></li>
+				<li <?=$cur_page3?>><?=$href3?>Культура</a></li>
+				<li <?=$cur_page4?>><?=$href4?>Технологии</a></li>
+				<li <?=$cur_page5?>><?=$href5?>#Оффтоп</a></li>
+			</ul>
+		</nav>
+		<section>
+			<div id = "lsbox">
+				<h4><?=$date_post0?></h4>
+				<h1><?=$header0?></h1>
+				<p><?=$preview0?></p>
+				<a href = "page.php?id=<?=$link0?>">Читать далее...</a>
+			</div>
+			<div id = "rsbox">
+				<div class = "rsbox-img" style = "background-image: linear-gradient(to right, #343a40, transparent), url('<?=$img0?>');"></div>
+			</div>
+		</section>
+		<h1>Последние новости</h1>
+		<figure>
+			<?=$rows?>
+		</figure>
+	</div>
+	<footer>
+		<div id="footer">
+			<p>«Новости» © 2020
+		</div>
+	</footer>
+	<a href="#" class="totop"><img src="style/top.png" alt="Наверх" border="0" width = 50 height = 50></a>
+</body>
+</html>
